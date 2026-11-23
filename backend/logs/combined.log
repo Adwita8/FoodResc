@@ -1,0 +1,34 @@
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 11:56:20"}
+{"level":"warn","message":"MongoDB disconnected","service":"foodrescue-backend","timestamp":"2026-11-23 11:56:20"}
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 12:02:39"}
+{"level":"warn","message":"MongoDB disconnected","service":"foodrescue-backend","timestamp":"2026-11-23 12:02:39"}
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 12:07:34"}
+{"level":"warn","message":"MongoDB disconnected","service":"foodrescue-backend","timestamp":"2026-11-23 12:07:35"}
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 12:11:16"}
+{"level":"warn","message":"MongoDB disconnected","service":"foodrescue-backend","timestamp":"2026-11-23 12:11:16"}
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 12:15:45"}
+{"level":"warn","message":"MongoDB disconnected","service":"foodrescue-backend","timestamp":"2026-11-23 12:15:55"}
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 12:17:56"}
+{"level":"info","message":"MongoDB connected successfully","service":"foodrescue-backend","timestamp":"2026-11-23 12:18:02"}
+{"level":"info","message":"Starting background expiry monitor service (interval: 60s)...","service":"foodrescue-backend","timestamp":"2026-11-23 12:18:02"}
+{"level":"info","message":"===============================================","service":"foodrescue-backend","timestamp":"2026-11-23 12:18:02"}
+{"level":"info","message":"  FoodRescue API is online on PORT: 5000  ","service":"foodrescue-backend","timestamp":"2026-11-23 12:18:02"}
+{"level":"info","message":"  Environment: development                  ","service":"foodrescue-backend","timestamp":"2026-11-23 12:18:02"}
+{"level":"info","message":"  Health Check: http://localhost:5000/api/health ","service":"foodrescue-backend","timestamp":"2026-11-23 12:18:02"}
+{"level":"info","message":"===============================================","service":"foodrescue-backend","timestamp":"2026-11-23 12:18:02"}
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:46"}
+{"level":"info","message":"MongoDB connected successfully","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:49"}
+{"level":"info","message":"Starting background expiry monitor service (interval: 60s)...","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:49"}
+{"level":"info","message":"===============================================","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:49"}
+{"level":"info","message":"  FoodRescue API is online on PORT: 5000  ","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:49"}
+{"level":"info","message":"  Environment: development                  ","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:49"}
+{"level":"info","message":"  Health Check: http://localhost:5000/api/health ","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:49"}
+{"level":"info","message":"===============================================","service":"foodrescue-backend","timestamp":"2026-11-23 12:35:49"}
+{"level":"info","message":"Initializing FoodRescue Backend Services...","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:27"}
+{"level":"info","message":"MongoDB connected successfully","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:32"}
+{"level":"info","message":"Starting background expiry monitor service (interval: 60s)...","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:32"}
+{"level":"info","message":"===============================================","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:32"}
+{"level":"info","message":"  FoodRescue API is online on PORT: 5000  ","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:32"}
+{"level":"info","message":"  Environment: development                  ","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:32"}
+{"level":"info","message":"  Health Check: http://localhost:5000/api/health ","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:32"}
+{"level":"info","message":"===============================================","service":"foodrescue-backend","timestamp":"2026-11-23 12:37:32"}
