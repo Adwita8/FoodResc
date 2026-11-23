@@ -1,6 +1,14 @@
 import mongoose from 'mongoose';
+import dns from 'dns';
 import { env } from './env';
 import { logger } from '../utils/logger';
+
+// Configure resilient DNS servers for MongoDB Atlas SRV query resolution on Windows/ISP networks
+try {
+  dns.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4']);
+} catch (dnsErr) {
+  // Ignore if not supported in environment
+}
 
 let isConnected = false;
 

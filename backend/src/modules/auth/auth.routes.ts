@@ -145,8 +145,8 @@ router.post('/register', authLimiter, validateRequest(registerSchema), async (re
         donorType: donorType || 'INDIVIDUAL',
         address: address || {},
         location: locationData,
-        verificationStatus: 'NOT_SUBMITTED',
-        reliabilityScore: 50,
+        verificationStatus: env.NODE_ENV === 'development' ? 'APPROVED' : 'NOT_SUBMITTED',
+        reliabilityScore: 85,
       });
     } else if (role === UserRole.NGO) {
       await NGO.create({
@@ -157,12 +157,12 @@ router.post('/register', authLimiter, validateRequest(registerSchema), async (re
         location: locationData,
         acceptedFoodCategories: [],
         storageFacilities: [],
-        maximumCapacity: 0,
-        availableCapacity: 0,
+        maximumCapacity: 500,
+        availableCapacity: 500,
         operatingHours: [],
         transportationAvailability: false,
-        verificationStatus: 'NOT_SUBMITTED',
-        reliabilityScore: 50,
+        verificationStatus: env.NODE_ENV === 'development' ? 'APPROVED' : 'NOT_SUBMITTED',
+        reliabilityScore: 85,
       });
     } else if (role === UserRole.VOLUNTEER) {
       await Volunteer.create({

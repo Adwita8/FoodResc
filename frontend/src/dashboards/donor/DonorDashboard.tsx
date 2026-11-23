@@ -87,7 +87,7 @@ export const DonorDashboard: React.FC = () => {
       setDescription('');
       fetchDonorData();
     } catch (err: any) {
-      setFormError(err.response?.data?.message || 'Failed to publish donation');
+      setFormError(err.message || err.response?.data?.message || 'Failed to publish donation');
     } finally {
       setIsSubmitting(false);
     }
