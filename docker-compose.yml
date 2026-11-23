@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  # MongoDB
+  mongodb:
+    image: mongo:7
+    container_name: foodrescue-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: foodrescue
+      MONGO_INITDB_ROOT_PASSWORD: foodrescue_dev
+      MONGO_INITDB_DATABASE: foodrescue
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - foodrescue-network
+
+  # Redis
+  redis:
+    image: redis:7-alpine
+    container_name: foodrescue-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - foodrescue-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: foodrescue-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+      - redis
+    volumes:
+      - ./backend/src:/app/src
+    networks:
+      - foodrescue-network
+
+  # Background Worker
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: foodrescue-worker
+    restart: unless-stopped
+    command: npm run worker
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - foodrescue-network
+
+  # Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: foodrescue-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - foodrescue-network
+
+volumes:
+  mongodb_data:
+  redis_data:
+
+networks:
+  foodrescue-network:
+    driver: bridge
